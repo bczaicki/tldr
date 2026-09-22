@@ -35,7 +35,7 @@ The guides edit prose one sentence at a time. `/tldr` also has to decide *which*
 - **Combine sentences that share a subject.** v3/v4 outputs split one item across 3-4 short sentences ("Its id is X. It overlaps Y.").
 - **Specific words over vague ones.** A specific word replaces a phrase.
 
-**Caution:** UNC's affirmative-over-negative rule must not flip a meaningful negative. "#6530 doesn't fix 2882" is the finding itself. The rule applies only to stacked negatives.
+**Caution:** UNC's affirmative-over-negative rule must not flip a meaningful negative. "the PR doesn't fix its ticket" is the finding itself. The rule applies only to stacked negatives.
 
 **Tested in v5 (`eval/variants/v5.md`), rejected.** v5 added the first three bullets plus the phrase-level rules to v4:
 - **Length:** 0.44 vs v4's 0.43, so no gain.

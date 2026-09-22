@@ -38,6 +38,8 @@ eval/run.sh working -- s1 s3      # only some samples
 python3 eval/score.py v1 v4       # re-print the table from saved grades
 ```
 
+Runs start in `$TLDR_EVAL_CWD` (default `~`), so they load that project's CLAUDE.md and memory the way a real session would. Set it in the gitignored `eval/data/env.sh`, e.g. `export TLDR_EVAL_CWD=$HOME/code/my-project`. Other overrides: `TLDR_EVAL_MODEL`, `TLDR_EVAL_REPS`, and `TLDR_TRANSCRIPTS` (read by `extract.py`).
+
 **Metrics:**
 - **retain:** checklist facts kept.
 - **ratio:** output words ÷ source words.

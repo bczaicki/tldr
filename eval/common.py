@@ -1,9 +1,11 @@
 import os
 EVAL = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(EVAL, "data")
+# The project the samples came from; Claude Code keys its transcript dir on that path.
+CWD = os.path.abspath(os.path.expanduser(os.environ.get("TLDR_EVAL_CWD", "~")))
 TRANSCRIPTS = os.environ.get(
     "TLDR_TRANSCRIPTS",
-    os.path.expanduser("~/.claude/projects/-Users-brianczaicki-code-phillips-connect/"))
+    os.path.expanduser("~/.claude/projects/" + CWD.replace("/", "-") + "/"))
 
 def samples():
     rows = {}

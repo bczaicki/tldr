@@ -4,7 +4,8 @@
 # Generates 3 reps per sample, grades each, prints the score table. Skips work already on disk.
 EVAL=${0:A:h}
 DATA=$EVAL/data
-CTX=${TLDR_EVAL_CWD:-$HOME/code/phillips-connect}   # cwd for runs: loads that project's CLAUDE.md + memory
+[[ -f $DATA/env.sh ]] && source $DATA/env.sh        # local, gitignored: export TLDR_EVAL_CWD=...
+CTX=${TLDR_EVAL_CWD:-$HOME}   # cwd for runs: loads that project's CLAUDE.md + memory, like a real session
 MODEL=${TLDR_EVAL_MODEL:-claude-opus-5-5}
 REPS=${TLDR_EVAL_REPS:-3}
 CLAUDE=(claude -p --tools "" --no-session-persistence --strict-mcp-config --model $MODEL)
