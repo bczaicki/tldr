@@ -49,7 +49,10 @@ python3 eval/score.py v1 v4       # re-print the table from saved grades
 | v1 | 71% | 0.29 | 10 | 3-6 bullet cap; drops caveats; bullets only |
 | v2 | 94% | 0.59 | 38 | keeps everything; invented "Fix:"/"Next:" lines |
 | v3 | 91% | 0.42 | 9 | budget + explanation clause; shapes work |
-| v4 | 90% | 0.43 | 6 | fidelity re-scan stops invented fixes and memory-sourced caveats |
+| **v4** (live) | 90% | 0.43 | 6 | fidelity re-scan stops invented fixes and memory-sourced caveats |
+| v5 (rejected) | 91% | 0.44 | 10 | v4 + a line-edit pass from the conciseness guides; no shorter, and dropped qualifiers turned hedged claims into certain ones |
+
+**Open problem:** long, dense sources still land at 0.42–0.51 (s1, s3, s4). Wording isn't the cause: outputs already score about 0.1 wordy hits per 100 words. The length comes from how many details survive triage, so the next lever is triage itself, not line editing.
 
 `eval/data/` (corpus, checklists, outputs, grades) is **gitignored**, because it holds excerpts of client-work transcripts. The corpus can be rebuilt with `python3 eval/extract.py`, which needs the local transcripts. `data/checklists.md` is hand-written and exists only on this machine.
 

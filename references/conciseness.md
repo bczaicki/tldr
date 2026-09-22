@@ -36,3 +36,9 @@ The guides edit prose one sentence at a time. `/tldr` also has to decide *which*
 - **Specific words over vague ones.** A specific word replaces a phrase.
 
 **Caution:** UNC's affirmative-over-negative rule must not flip a meaningful negative. "#6530 doesn't fix 2882" is the finding itself. The rule applies only to stacked negatives.
+
+**Tested in v5 (`eval/variants/v5.md`), rejected.** v5 added the first three bullets plus the phrase-level rules to v4:
+- **Length:** 0.44 vs v4's 0.43, so no gain.
+- **Fabrications:** 10 vs 6, because combining and collapsing stripped qualifiers. "*Potential* out-of-order replay" became certain, and "no Escape *on a phone keyboard*" became "no Escape".
+
+A future version that uses these techniques has to protect epistemic qualifiers explicitly. The eval can't tell it apart from v4 until it does.

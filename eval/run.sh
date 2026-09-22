@@ -19,7 +19,7 @@ elif [[ $1 == _grade ]]; then
   exit
 fi
 
-variants=(); while (( $# )) && [[ $1 != -- ]]; do variants+=$1; shift; done; shift
+variants=(); while (( $# )) && [[ $1 != -- ]]; do variants+=$1; shift; done; (( $# )) && shift
 sample_list=(${@:-$(awk -F'\t' '!/^#/ && NF {print $1}' $EVAL/samples.tsv)})
 mkdir -p $DATA/out $DATA/grade
 jobs=(); for v in $variants; do for s in $sample_list; do for r in $(seq $REPS); do jobs+="$v $s $r"; done; done; done
