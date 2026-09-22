@@ -1,0 +1,9 @@
+# name	session	row	args	checklist	shape under test
+s1	86fe7327	2376	-	s1	status report with tables
+s2	f6846fd0	498	-	s2	causal chain / root cause
+s3	32228cb3	525	-	s3	recommendation + math + commands
+s4	427acd5e	206	-	s4	answers to 9 numbered questions
+s5	b6eb35bc	24	-	s5	code-review findings
+s6	86fe7327	3447	-	s6	short (<100 words) control
+s7	f6846fd0	498	slack	s2	Slack audience
+s8	86fe7327	2376	pm	s1	PM audience

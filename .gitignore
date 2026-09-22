@@ -1,0 +1,4 @@
+# Sample data is excerpted from real Claude Code transcripts (client work) — keep it local.
+eval/data/
+.DS_Store
+__pycache__/
